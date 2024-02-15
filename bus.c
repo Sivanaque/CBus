@@ -26,7 +26,6 @@ int main(void) {
     if (choix == 1) {
         struct bus rbus;
         rbus = ajout_bus();
-        printf("\nRESULTAT\n");
         printf("\nID du bus : %d", rbus.id);
         printf("\nLigne du bus : %d", rbus.line);
         printf("\nPlaces disponibles dans le bus : %d", rbus.seats);
