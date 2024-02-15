@@ -1,21 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct bus {
-    int id;
-    int line;
-    int place;
+struct Player
+{
+    char name[40];
+    float hp;
+
+    char weapon[10];
+    int ammo;
+
 };
 
-int main(void) {
-    int caca = 1;
-    struct bus bus2 + caca;
+int main()
+{
+    struct Player *p1;
 
-    bus2.id = 192834;
-    bus2.line = 4;
-    bus2.place = 68;
+    // initialize pointer
+    p1 = (struct p1*) malloc(sizeof(struct Player));
 
-    printf("%d \n%d \n%d", bus2.id, bus2.line, bus2.place);
+    p1->ammo = 30;
 
+    printf("Ammo count: %d\n", p1->ammo);
+
+    // remember to free from malloc
+    free(p1);
+
+    return 0;
 }
-
