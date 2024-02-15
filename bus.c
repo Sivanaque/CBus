@@ -23,15 +23,6 @@ struct ligne {
 int main(void) {
     int choix = menu();
 
-    if (choix == 1) {
-        struct bus rbus;
-        rbus = ajout_bus();
-        printf("\nID du bus : %d", rbus.id);
-        printf("\nLigne du bus : %d", rbus.line);
-        printf("\nPlaces disponibles dans le bus : %d", rbus.seats);
-        printf("\nNom du chauffeur : %s\n", rbus.driver);
-    }
-
     return 0;
 }
 
@@ -82,6 +73,15 @@ int menu(void) {
                 printf("Votre choix : ");
 
                 scanf("%d", &choix);
+                if (choix == 1) {
+                    struct bus rbus;
+                    rbus = ajout_bus();
+                    printf("\nID du bus : %d", rbus.id);
+                    printf("\nLigne du bus : %d", rbus.line);
+                    printf("\nPlaces disponibles dans le bus : %d", rbus.seats);
+                    printf("\nNom du chauffeur : %s\n", rbus.driver);
+                }
+                break;
             case 2:
                 printf("1 - Ajouter\n");
                 printf("2 - Afficher tous\n");
