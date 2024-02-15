@@ -82,7 +82,6 @@ int menu(void) {
                 printf("Votre choix : ");
 
                 scanf("%d", &choix);
-                break;
             case 2:
                 printf("1 - Ajouter\n");
                 printf("2 - Afficher tous\n");
@@ -103,7 +102,7 @@ int menu(void) {
                 scanf("%d", &choix);
                 break;
             }
-        } while (choix == 1);
+        } while (choix != 0);
 
      return choix;
 }
