@@ -20,6 +20,15 @@ struct ligne {
     int maxbus;
 };
 
+
+struct station {
+    int number;
+    int length;
+    int nbstations;
+    int minbus;
+    int maxbus;
+};
+
 int main(void) {
     int choix = menu();
 
@@ -64,7 +73,6 @@ int menu(void) {
             case 1:
                 printf("1 - Ajouter un bus\n");
                 printf("2 - Afficher\n");
-                printf("3 - Consulter\n");
                 printf("4 - Supprimer\n");
                 printf("5 - Afficher Chauffeurs\n");
                 printf("6 - Trier par marque\n");
