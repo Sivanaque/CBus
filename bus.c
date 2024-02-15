@@ -20,14 +20,9 @@ struct ligne {
     int maxbus;
 };
 
-
 struct station {
-    int number;
-    int length;
-    int nbstations;
-    int minbus;
-    int maxbus;
-};
+    
+}
 
 int main(void) {
     int choix = menu();
