@@ -57,6 +57,8 @@ struct bus ajout_bus()
 int menu(void) {
     int nbus;
     int choix;
+    do {
+
 
         printf("#### MENU ####\n");
         printf("1 - Gérer bus\n");
@@ -100,6 +102,7 @@ int menu(void) {
 
                 scanf("%d", &choix);
                 break;
+            } while (choix != 0);
         }
 
      return choix;
