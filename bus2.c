@@ -1,9 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void gererBus() {
-    printf("Gestion des bus\n");
-    // Implémenter les actions de gestion des bus ici
+struct bus {
+    int id;
+    int seats;
+    int line;
+    char driver[50];
+};
+
+struct bus ajout_Bus(char name) {
+
 }
 
 void gererLigne() {
@@ -43,6 +49,10 @@ int main() {
                     printf("0 - Quitter\n");
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
+
+                    if (choix_sous_menu == 1) {
+                        printf("Entrer l'ID du bus")
+                    }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
