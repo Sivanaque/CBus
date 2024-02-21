@@ -8,7 +8,7 @@ struct bus {
     char driver[50];
 };
 
-struct bus ajout_Bus(char name) {
+struct bus ajout_bus(int id_bus) {
 
 }
 
@@ -51,7 +51,12 @@ int main() {
                     scanf("%d", &choix_sous_menu);
 
                     if (choix_sous_menu == 1) {
-                        printf("Entrer l'ID du bus")
+                        int id_bus;
+                        printf("Entrer l'ID du bus : ")
+                        scanf("%d", id_bus);
+                        struct bus id_bus;
+                        rbus = ajout_bus();
+
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
