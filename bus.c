@@ -24,7 +24,7 @@ struct station {
     int nubmer;
     char name[40];
     int line;
-}
+};
 
 int main(void) {
     int choix = menu();
