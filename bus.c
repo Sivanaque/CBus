@@ -21,7 +21,9 @@ struct ligne {
 };
 
 struct station {
-    
+    int nubmer;
+    char name[40];
+    int line;
 }
 
 int main(void) {
@@ -84,6 +86,7 @@ int menu(void) {
                     printf("\nLigne du bus : %d", rbus.line);
                     printf("\nPlaces disponibles dans le bus : %d", rbus.seats);
                     printf("\nNom du chauffeur : %s\n", rbus.driver);
+
                 }
                 break;
             case 2:
