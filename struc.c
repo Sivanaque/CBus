@@ -15,26 +15,26 @@ int main() {
     struct bus prop[nb];
 
     do {
-        printf("Combien souhaitez-vous ajouter de bus ?");
+        printf("Combien souhaitez-vous ajouter de bus ?\n");
         scanf("%d", &nb);
     } while (nb == 0);
 
-    for (i = 0; i < 3; i++) {
-        printf("\nEntrer l'ID du bus : ");
+    for (i = 0; i < nb; i++) {
+        printf("\nEntrer l'ID du bus %d : ", i);
         scanf ("%d", &prop[i].id);
 
-        printf("\nEntrer la ligne du bus : ");
+        printf("\nEntrer la ligne du bus %d : ", i);
         scanf ("%d", &prop[i].line);
 
-        printf("\nEntrer le nombre de places disponibles du bus : ");
+        printf("\nEntrer le nombre de places disponibles du bus %d : ", i);
         scanf ("%d", &prop[i].seats);
 
-        printf("\nEnter le nom du chauffeur de bus : ");
+        printf("\nEnter le nom du chauffeur de bus %d : ", i);
         scanf (" %[^\n]%*c", prop[i].driver);
     }
 
-    for (i = 0; i < 3; i++) {
-        printf("\nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", bus[i].id, bus[i].line, bus[i].seats, bus[i].driver);
+    for (i = 0; i < nb; i++) {
+        printf("\nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
     }
   return 0;
 }
