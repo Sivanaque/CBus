@@ -66,7 +66,7 @@ int main() {
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
 
-                    if (choix == 1) {
+                    if (choix_sous_menu == 1) {
                         struct bus* prop = ajout_bus();
                     }
                 } while (choix_sous_menu != 0);
