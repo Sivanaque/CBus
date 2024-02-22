@@ -36,4 +36,11 @@ int main() {
   }
 } */
 
-void ajout_bus(struct details)
+void ajout_bus() {
+    int nb;
+    do {
+        printf("Combien souhaitez-vous ajouter de bus ?");
+        scanf("%d", nb);
+    } while (nb = 0);
+
+}
