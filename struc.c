@@ -52,7 +52,7 @@ struct bus ajout_bus()
 
     struct details bus[nb] = {
         {
-
+            
         }
     }
 
