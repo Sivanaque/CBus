@@ -34,7 +34,7 @@ int main(void) {
 
 struct bus ajout_bus()
 {
-  struct bus bus1;
+  struct bus 13;
 
   printf("Entrer l'ID du bus : ");
   scanf ("%d", &bus1.id);
