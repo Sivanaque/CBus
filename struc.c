@@ -45,14 +45,23 @@ struct bus ajout_bus()
 {
     int nb = 0;
     int i;
+    int scanid;
+    int scanline;
+    int scanseats;
+    char driverscan[50];
+
     do {
         printf("Combien souhaitez-vous ajouter de bus ?");
         scanf("%d", nb);
     } while (nb = 0);
 
+    for (i = 0; i < nb; i++) {
+        printf()
+    }
+
     struct details bus[nb] = {
         {
-            
+
         }
     }
 
