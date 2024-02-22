@@ -10,7 +10,7 @@ struct bus {
 
 int main() {
 
-    int nb;
+    int nb = 0;
     int i;
     struct bus prop[nb];
 
