@@ -45,25 +45,25 @@ struct bus ajout_bus()
 {
     int nb = 0;
     int i;
-    int scanid;
-    int scanline;
-    int scanseats;
-    char driverscan[50];
 
     do {
         printf("Combien souhaitez-vous ajouter de bus ?");
         scanf("%d", nb);
     } while (nb = 0);
 
+    struct details bus[nb];
+
     for (i = 0; i < nb; i++) {
-        printf()
+        printf("Entrer l'ID du bus : ");
+        scanf ("%d", &bus[i].id);
+
+        printf("Entrer la ligne du bus : ");
+        scanf ("%d", &bus[i].line);
+
+        printf("Entrer le nombre de places disponibles du bus : ");
+        scanf ("%d", &bus[i].seats);
+
+        printf("Enter le nom du chauffeur de bus : ");
+        scanf (" %[^\n]%*c", bus1.driver);
     }
-
-    struct details bus[nb] = {
-        {
-
-        }
-    }
-
-
 }
