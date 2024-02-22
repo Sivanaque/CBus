@@ -12,6 +12,33 @@ void print_struct(struct details str_arr[]);
 
 int main() {
 
+    int nb = 0;
+    int i;
+
+    do {
+        printf("Combien souhaitez-vous ajouter de bus ?");
+        scanf("%d", nb);
+    } while (nb = 0);
+
+    struct details bus[nb];
+
+    for (i = 0; i < nb; i++) {
+        printf("\nEntrer l'ID du bus : ");
+        scanf ("%d", &bus[i].id);
+
+        printf("\nEntrer la ligne du bus : ");
+        scanf ("%d", &bus[i].line);
+
+        printf("\nEntrer le nombre de places disponibles du bus : ");
+        scanf ("%d", &bus[i].seats);
+
+        printf("\nEnter le nom du chauffeur de bus : ");
+        scanf (" %[^\n]%*c", &bus[i].driver);
+    }
+
+    for (i = 0; i < nb; i++) {
+        
+    }
   return 0;
 }
 /*
@@ -43,27 +70,5 @@ struct details student[3] = {    <---- Array de structure variable
 
 struct bus ajout_bus()
 {
-    int nb = 0;
-    int i;
 
-    do {
-        printf("Combien souhaitez-vous ajouter de bus ?");
-        scanf("%d", nb);
-    } while (nb = 0);
-
-    struct details bus[nb];
-
-    for (i = 0; i < nb; i++) {
-        printf("Entrer l'ID du bus : ");
-        scanf ("%d", &bus[i].id);
-
-        printf("Entrer la ligne du bus : ");
-        scanf ("%d", &bus[i].line);
-
-        printf("Entrer le nombre de places disponibles du bus : ");
-        scanf ("%d", &bus[i].seats);
-
-        printf("Enter le nom du chauffeur de bus : ");
-        scanf (" %[^\n]%*c", bus1.driver);
-    }
 }
