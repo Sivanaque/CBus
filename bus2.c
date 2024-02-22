@@ -87,10 +87,6 @@ struct bus ajout_bus() {
     scanf("%d", &nb);
 
     struct bus *prop = malloc(nb * sizeof(struct bus));
-    if (prop == NULL) {
-        printf("Erreur d'allocation de mémoire\n");
-        return 1;
-    }
 
     for (i = 0; i < nb; i++) {
         printf("\nEntrer l'ID du bus %d : ", i);
@@ -107,9 +103,9 @@ struct bus ajout_bus() {
     }
 
     for (i = 0; i < nb; i++) {
-        printf("\nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
+        printf("### RECAPITULATIF ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
     }
 
     free(prop);
-    return 0;
+    return 
 }
