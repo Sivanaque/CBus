@@ -10,16 +10,15 @@ struct bus {
 
 int main() {
 
-    int nb = 0;
+    int nb;
     int i;
     struct bus prop[nb];
 
-   do {
-        printf("Combien souhaitez-vous ajouter de bus ?\n");
-        scanf("%d", &nb);
-    } while (nb == 0); */
+    printf("Combien souhaitez-vous ajouter de bus ?\n");
+    scanf("%d", &nb);
 
-    for (i = 0; i < 3; i++) {
+
+    for (i = 0; i < nb; i++) {
         printf("\nEntrer l'ID du bus %d : ", i);
         scanf ("%d", &prop[i].id);
 
@@ -33,7 +32,7 @@ int main() {
         scanf (" %[^\n]%*c", prop[i].driver);
     }
 
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < nb; i++) {
         printf("\nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
     }
   return 0;
