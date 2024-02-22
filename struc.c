@@ -29,7 +29,7 @@ int main() {
         scanf ("%d", &prop[i].seats);
 
         printf("\nEnter le nom du chauffeur de bus %d : ", i);
-        scanf (" %50s", prop[i].driver);
+        scanf ("%50s", prop[i].driver);
     }
 
     for (i = 0; i < nb; i++) {
