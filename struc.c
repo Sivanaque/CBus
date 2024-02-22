@@ -41,7 +41,8 @@ struct details student[3] = {    <---- Array de structure variable
   }
 } */
 
-void ajout_bus() {
+struct bus ajout_bus()
+{
     int nb = 0;
     int i;
     do {
@@ -51,7 +52,7 @@ void ajout_bus() {
 
     struct details bus[nb] = {
         {
-            
+
         }
     }
 
