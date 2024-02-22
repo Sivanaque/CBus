@@ -14,12 +14,12 @@ int main() {
     int i;
     struct bus prop[nb];
 
-    do {
+   do {
         printf("Combien souhaitez-vous ajouter de bus ?\n");
         scanf("%d", &nb);
-    } while (nb == 0);
+    } while (nb == 0); */
 
-    for (i = 0; i < nb; i++) {
+    for (i = 0; i < 3; i++) {
         printf("\nEntrer l'ID du bus %d : ", i);
         scanf ("%d", &prop[i].id);
 
@@ -33,7 +33,7 @@ int main() {
         scanf (" %[^\n]%*c", prop[i].driver);
     }
 
-    for (i = 0; i < nb; i++) {
+    for (i = 0; i < 3; i++) {
         printf("\nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
     }
   return 0;
