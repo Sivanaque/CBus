@@ -67,7 +67,7 @@ int main() {
                     scanf("%d", &choix_sous_menu);
 
                     if (choix == 1) {
-                        
+                        struct bus* prop = ajout_bus();
                     }
                 } while (choix_sous_menu != 0);
                 break;
