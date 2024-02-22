@@ -80,7 +80,7 @@ int main() {
 }
 
 struct bus ajout_bus() {
-    int nb = 0;
+    int nb;
     int i;
 
     printf("Combien souhaitez-vous ajouter de bus ?\n");

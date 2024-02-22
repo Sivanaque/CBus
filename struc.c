@@ -9,17 +9,11 @@ struct bus {
 };
 
 int main() {
-    int nb = 0;
+    int nb;
     int i;
 
     printf("Combien souhaitez-vous ajouter de bus ?\n");
     scanf("%d", &nb);
-
-    struct bus *prop = malloc(nb * sizeof(struct bus));
-    if (prop == NULL) {
-        printf("Erreur d'allocation de mémoire\n");
-        return 1;
-    }
 
     for (i = 0; i < nb; i++) {
         printf("\nEntrer l'ID du bus %d : ", i);
