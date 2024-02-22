@@ -10,9 +10,9 @@ struct bus {
 
 int main() {
 
-    int nb;
+    int nb = 0;
     int i;
-    struct details bus[3];
+    struct bus prop[nb];
 
     do {
         printf("Combien souhaitez-vous ajouter de bus ?");
@@ -21,16 +21,16 @@ int main() {
 
     for (i = 0; i < 3; i++) {
         printf("\nEntrer l'ID du bus : ");
-        scanf ("%d", &bus[i].id);
+        scanf ("%d", &prop[i].id);
 
         printf("\nEntrer la ligne du bus : ");
-        scanf ("%d", &bus[i].line);
+        scanf ("%d", &prop[i].line);
 
         printf("\nEntrer le nombre de places disponibles du bus : ");
-        scanf ("%d", &bus[i].seats);
+        scanf ("%d", &prop[i].seats);
 
         printf("\nEnter le nom du chauffeur de bus : ");
-        scanf (" %[^\n]%*c", &bus[i].driver);
+        scanf (" %[^\n]%*c", prop[i].driver);
     }
 
     for (i = 0; i < 3; i++) {
