@@ -26,6 +26,10 @@ int main() {
     int choix_principal;
     int choix_sous_menu;
 
+    if (choix_sous_menu == 1) {
+        printf("BLABLABLA");
+    }
+
     do {
         printf("\nMENU PRINCIPAL\n");
         printf("1 = Gérer bus\n");
@@ -50,13 +54,6 @@ int main() {
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
 
-                    if (choix_sous_menu == 1) {
-                        int id_bus;
-                        printf("Entrer l'ID du bus : ")
-                        scanf("%d", id_bus);
-                        struct bus rbus;
-                        rbus = ajout_bus(1234);
-                    }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
