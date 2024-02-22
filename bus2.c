@@ -65,10 +65,7 @@ int main() {
                     printf("0 - Quitter\n");
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
-
-                    if (choix_sous_menu == 1) {
-                        struct bus* prop = ajout_bus();
-                    }
+                    // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
             case 0:
@@ -109,7 +106,5 @@ struct bus ajout_bus() {
         printf("### RECAPITULATIF ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
     }
 
-    struct bus* prop = (bus*)calloc(3, sizeof(struct bus));
     free(prop);
-    return prop
 }
