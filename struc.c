@@ -3,8 +3,8 @@
 
 struct bus {
     int id;
-    int seats;
     int line;
+    int seats;
     char driver[50];
 };
 
