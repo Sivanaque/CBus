@@ -37,7 +37,7 @@ int main() {
     }
 
     for (i = 0; i < nb; i++) {
-        
+        printf("\nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", bus[i].id, bus[i].line, bus[i].seats, bus[i])
     }
   return 0;
 }
