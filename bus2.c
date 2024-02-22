@@ -9,7 +9,9 @@ struct bus {
 };
 
 struct bus ajout_bus(int id) {
+    struct bus id;
 
+    printf("TEST");
 }
 
 void gererLigne() {
@@ -25,10 +27,6 @@ void statistiques() {
 int main() {
     int choix_principal;
     int choix_sous_menu;
-
-    if (choix_sous_menu == 1) {
-        printf("BLABLABLA");
-    }
 
     do {
         printf("\nMENU PRINCIPAL\n");
@@ -54,6 +52,13 @@ int main() {
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
 
+                    if (choix_sous_menu == 1) {
+                        int id_bus;
+                        printf("Entrer l'ID du bus : ")
+                        scanf("%s", id_bus);
+                        struct bus rbus;
+                        rbus = ajout_bus(id_bus);
+                    }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
