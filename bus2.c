@@ -8,21 +8,7 @@ struct bus {
     char driver[50];
 };
 
-struct bus ajout_bus(int id) {
-    struct bus id;
-
-    printf("TEST");
-}
-
-void gererLigne() {
-    printf("Gestion des lignes\n");
-    // Implémenter les actions de gestion des lignes ici
-}
-
-void statistiques() {
-    printf("Statistiques\n");
-    // Implémenter les actions de statistiques ici
-}
+struct bus ajout_bus();
 
 int main() {
     int choix_principal;
@@ -52,13 +38,6 @@ int main() {
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
 
-                    if (choix_sous_menu == 1) {
-                        int id_bus;
-                        printf("Entrer l'ID du bus : ")
-                        scanf("%s", id_bus);
-                        struct bus rbus;
-                        rbus = ajout_bus(id_bus);
-                    }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
@@ -97,5 +76,40 @@ int main() {
         }
     } while (choix_principal != 0);
 
+    return 0;
+}
+
+struct bus ajout_bus() {
+    int nb = 0;
+    int i;
+
+    printf("Combien souhaitez-vous ajouter de bus ?\n");
+    scanf("%d", &nb);
+
+    struct bus *prop = malloc(nb * sizeof(struct bus));
+    if (prop == NULL) {
+        printf("Erreur d'allocation de mémoire\n");
+        return 1;
+    }
+
+    for (i = 0; i < nb; i++) {
+        printf("\nEntrer l'ID du bus %d : ", i);
+        scanf ("%d", &prop[i].id);
+
+        printf("\nEntrer la ligne du bus %d : ", i);
+        scanf ("%d", &prop[i].line);
+
+        printf("\nEntrer le nombre de places disponibles du bus %d : ", i);
+        scanf ("%d", &prop[i].seats);
+
+        printf("\nEnter le nom du chauffeur de bus %d : ", i);
+        scanf ("%s", prop[i].driver);
+    }
+
+    for (i = 0; i < nb; i++) {
+        printf("\nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
+    }
+
+    free(prop);
     return 0;
 }

@@ -39,6 +39,6 @@ int main() {
         printf("\nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
     }
 
-    free(prop); // N'oubliez pas de libérer la mémoire allouée dynamiquement
+    free(prop);
     return 0;
 }
