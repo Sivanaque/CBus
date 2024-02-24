@@ -14,6 +14,7 @@ int main() {
     int choix_principal;
     int choix_sous_menu;
 
+
     do {
         printf("\nMENU PRINCIPAL\n");
         printf("1 = Gérer bus\n");
@@ -86,7 +87,7 @@ struct bus ajout_bus() {
     printf("Combien souhaitez-vous ajouter de bus ?\n");
     scanf("%d", &nb);
 
-    struct bus *prop = malloc(nb * sizeof(struct bus));
+    struct bus prop[nb];
 
     for (i = 0; i < nb; i++) {
         printf("\nEntrer l'ID du bus %d : ", i);
