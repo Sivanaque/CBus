@@ -34,6 +34,7 @@ int main() {
                     printf("1 - Ajouter bus\n");
                     printf("2 - Afficher\n");
                     printf("3 - Supprimer\n");
+                    printf("4 - Ajouter Chauffeurs\n");
                     printf("4 - Afficher Chauffeurs\n");
                     printf("6 - Trier par marque\n");
                     printf("7 - Trier par nombre de places\n");
@@ -125,6 +126,6 @@ void add_driver() {
         }
 
         for (int i = 0; i < nb ; i++) {
-            printf("%d : %s ", i, driver[i]);
+            printf("Chauffeur numéro : %d : %s ", i, driver[1]);
         }
 }
