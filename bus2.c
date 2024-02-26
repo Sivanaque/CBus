@@ -16,7 +16,6 @@ int main() {
 
 
     do {
-        struct bus prop;
         printf("\nMENU PRINCIPAL\n");
         printf("1 - Gérer bus\n");
         printf("2 - Gérer ligne\n");
@@ -28,6 +27,7 @@ int main() {
         switch (choix_principal) {
             case 1:
                 do {
+                    struct bus prop;
                     printf("\nMENU Gérer bus\n");
                     printf("1 - Ajouter bus\n");
                     printf("2 - Afficher\n");
@@ -42,7 +42,7 @@ int main() {
                     if (choix_sous_menu == 1) {
                         prop = ajout_bus();
                     } else if (choix_sous_menu == 2) {
-                        printf("### RECAPITULATIF ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.id, prop.line, prop.seats, prop.driver);
+                        printf("### GROS TEST ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.id, prop.line, prop.seats, prop.driver);
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
