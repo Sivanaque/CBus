@@ -113,14 +113,18 @@ struct bus ajout_bus() {
 }
 
 void add_driver() {
-    char variable[10][100];
+    int nb;
+
+    printf("Combien de chauffeur souhaitez-vous ajouter ? ")
+    scanf("%d", nb)
+    char driver[nb][50];
 
     printf("Enter Strings\n");
-        for (int i = 0; i < 3 ; i++) {
-            scanf("%100s", variable[i]);
+        for (int i = 0; i < nb ; i++) {
+            scanf("%100s", driver[i]);
         }
 
-        for (int i = 0; i < 3 ; i++) {
-            
+        for (int i = 0; i < nb ; i++) {
+            printf("%d : %s ", i, driver[i]);
         }
 }
