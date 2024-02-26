@@ -42,6 +42,7 @@ int main() {
                     if (choix_sous_menu == 1) {
                         prop = ajout_bus();
                     } else if (choix_sous_menu == 2) {
+                        system("clear");
                         printf("### GROS TEST ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.id, prop.line, prop.seats, prop.driver);
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
