@@ -10,7 +10,7 @@ struct bus {
 };
 
 struct bus ajout_bus();
-void add_driver();
+char add_driver();
 
 int main() {
     int choix_principal;
@@ -53,7 +53,20 @@ int main() {
                         strcpy(prop.driver, "NULL");
                         printf("\nVotre bus a bien été supprimé !\n");
                     } else if (choix_sous_menu == 4) {
-                        driver = add_driver();
+                        int nb;
+
+                        printf("Combien de chauffeur souhaitez-vous ajouter ? ");
+                        scanf("%d", &nb);
+                        char driver[nb][50];
+
+                        for (int i = 0; i < nb ; i++) {
+            printf("Enter le nom du chauffeur N°%d\n", i);
+            scanf(" %[^\n]%*c", driver[i]);
+        }
+
+        for (int i = 0; i < nb ; i++) {
+            printf("Chauffeur numéro %d : %s \n", i, driver[i]);
+        }
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
@@ -114,21 +127,8 @@ struct bus ajout_bus() {
         return prop;
 }
 
-char * add_driver() {
-    int nb;
+char add_driver() {
 
-    printf("Combien de chauffeur souhaitez-vous ajouter ? ");
-    scanf("%d", &nb);
-    char driver[nb][50];
-
-    printf("Enter Strings\n");
-        for (int i = 0; i < nb ; i++) {
-            scanf(" %[^\n]%*c", driver[i]);
-        }
-
-        for (int i = 0; i < nb ; i++) {
-            printf("Chauffeur numéro %d : %s \n", i, driver[i]);
-        }
 
     return driver;
 }
