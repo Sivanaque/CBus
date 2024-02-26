@@ -60,13 +60,13 @@ int main() {
                         char driver[nb][50];
 
                         for (int i = 0; i < nb ; i++) {
-            printf("Enter le nom du chauffeur N°%d\n", i);
-            scanf(" %[^\n]%*c", driver[i]);
-        }
+                            printf("Enter le nom du chauffeur N°%d\n", i);
+                            scanf(" %[^\n]%*c", driver[i]);
+                        }
 
-        for (int i = 0; i < nb ; i++) {
-            printf("Chauffeur numéro %d : %s \n", i, driver[i]);
-        }
+                        for (int i = 0; i < nb ; i++) {
+                            printf("Chauffeur numéro %d : %s \n", i, driver[i]);
+                        }
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
@@ -125,10 +125,4 @@ struct bus ajout_bus() {
         printf("\n### RECAPITULATIF ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.line, prop.seats, prop.driver);
 
         return prop;
-}
-
-char add_driver() {
-
-
-    return driver;
 }
