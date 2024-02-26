@@ -114,7 +114,6 @@ struct bus ajout_bus() {
 }
 
 void add_driver() {
-    int nb;
 
     printf("Combien de chauffeur souhaitez-vous ajouter ? ");
     scanf("%d", &nb);
@@ -122,10 +121,10 @@ void add_driver() {
 
     printf("Enter Strings\n");
         for (int i = 0; i < nb ; i++) {
-            scanf(" %50s", driver[i]);
+            scanf(" %[^\n]%*c", driver[i]);
         }
 
         for (int i = 0; i < nb ; i++) {
-            printf("Chauffeur numéro : %d : %s ", i, driver[1]);
+            printf("Chauffeur numéro %d : %s \n", i, driver[i]);
         }
 }
