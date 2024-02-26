@@ -17,16 +17,17 @@ int main() {
 
     do {
         printf("\nMENU PRINCIPAL\n");
-        printf("1 = Gérer bus\n");
-        printf("2 = Gérer ligne\n");
-        printf("3 = Statistiques\n");
-        printf("0 = Quitter\n");
+        printf("1 - Gérer bus\n");
+        printf("2 - Gérer ligne\n");
+        printf("3 - Statistiques\n");
+        printf("0 - Quitter\n");
         printf("Entrez votre choix: ");
         scanf("%d", &choix_principal);
 
         switch (choix_principal) {
             case 1:
                 do {
+                    struct bus prop;
                     printf("\nMENU Gérer bus\n");
                     printf("1 - Ajouter bus\n");
                     printf("2 - Afficher\n");
@@ -38,7 +39,16 @@ int main() {
                     printf("0 - Quitter\n");
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
-
+                    if (choix_sous_menu == 1) {
+                        prop = ajout_bus();
+                    } else if (choix_sous_menu == 2) {
+                        system("clear");
+                        printf("### RESUME BUS ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.line, prop.seats, prop.driver);
+                    } else if (choix_sous_menu == 3) {
+                        prop.line = 0;
+                        prop.seats = 0;
+                        prop.
+                    }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
@@ -81,30 +91,19 @@ int main() {
 }
 
 struct bus ajout_bus() {
-    int nb = 0;
-    int i;
+    int i = 0;
+    struct bus prop;
 
-    printf("Combien souhaitez-vous ajouter de bus ?\n");
-    scanf("%d", &nb);
+        printf("\nEntrer la ligne du bus : ");
+        scanf ("%d", &prop.line);
 
-    struct bus prop[nb];
+        printf("\nEntrer le nombre de places disponibles du bus : ");
+        scanf ("%d", &prop.seats);
 
-    for (i = 0; i < nb; i++) {
-        printf("\nEntrer l'ID du bus %d : ", i);
-        scanf ("%d", &prop[i].id);
+        printf("\nEnter le nom du chauffeur de bus : ");
+        scanf(" %[^\n]%*c", prop.driver);
 
-        printf("\nEntrer la ligne du bus %d : ", i);
-        scanf ("%d", &prop[i].line);
+        printf("\n### RECAPITULATIF ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.line, prop.seats, prop.driver);
 
-        printf("\nEntrer le nombre de places disponibles du bus %d : ", i);
-        scanf ("%d", &prop[i].seats);
-
-        printf("\nEnter le nom du chauffeur de bus %d : ", i);
-        scanf ("%s", prop[i].driver);
-    }
-
-    for (i = 0; i < nb; i++) {
-        printf("### RECAPITULATIF ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
-    }
-
+        return prop;
 }
