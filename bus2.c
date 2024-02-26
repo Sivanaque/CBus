@@ -27,6 +27,7 @@ int main() {
         switch (choix_principal) {
             case 1:
                 do {
+                    struct student prop;
                     printf("\nMENU Gérer bus\n");
                     printf("1 - Ajouter bus\n");
                     printf("2 - Afficher\n");
@@ -39,7 +40,7 @@ int main() {
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
                     if (choix_sous_menu == 1) {
-                        
+                        prop = ajout_bus();
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
