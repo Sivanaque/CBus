@@ -122,7 +122,7 @@ void add_driver() {
 
     printf("Enter Strings\n");
         for (int i = 0; i < nb ; i++) {
-            scanf("%100s", driver[i]);
+            scanf(" %50s", driver[i]);
         }
 
         for (int i = 0; i < nb ; i++) {
