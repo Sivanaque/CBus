@@ -35,7 +35,7 @@ int main() {
                     printf("2 - Afficher\n");
                     printf("3 - Supprimer\n");
                     printf("4 - Ajouter Chauffeurs\n");
-                    printf("4 - Afficher Chauffeurs\n");
+                    printf("5 - Afficher Chauffeurs\n");
                     printf("6 - Trier par marque\n");
                     printf("7 - Trier par nombre de places\n");
                     printf("0 - Quitter\n");
