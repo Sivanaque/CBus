@@ -32,9 +32,8 @@ int main() {
                     printf("\nMENU Gérer bus\n");
                     printf("1 - Ajouter bus\n");
                     printf("2 - Afficher\n");
-                    printf("3 - Consulter\n");
-                    printf("4 - Supprimer\n");
-                    printf("5 - Afficher Chauffeurs\n");
+                    printf("3 - Supprimer\n");
+                    printf("4 - Afficher Chauffeurs\n");
                     printf("6 - Trier par marque\n");
                     printf("7 - Trier par nombre de places\n");
                     printf("0 - Quitter\n");
@@ -49,7 +48,9 @@ int main() {
                         prop.line = 0;
                         prop.seats = 0;
                         strcpy(prop.driver, "NULL");
-                        printf("Votre bus a bien été enregistré !");
+                        printf("\nVotre bus a bien été supprimé !\n");
+                    } else if (choix_sous_menu == 4) {
+                        
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
