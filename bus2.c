@@ -47,7 +47,7 @@ int main() {
                     } else if (choix_sous_menu == 3) {
                         prop.line = 0;
                         prop.seats = 0;
-                        prop.
+                        prop.driver = "test";
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
