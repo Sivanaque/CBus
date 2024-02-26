@@ -39,6 +39,8 @@ int main() {
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
 
+                    struct 
+                    prop = ajout_bus();
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
@@ -100,7 +102,7 @@ struct bus ajout_bus() {
         printf("\nEnter le nom du chauffeur de bus %d : ", i);
         scanf ("%s", prop[i].driver);
 
-        printf("### RECAPITULATIF ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
+        printf("### RECAPITULATIF ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop.id, prop.line, prop.seats, prop.driver);
 
         return prop;
 }
