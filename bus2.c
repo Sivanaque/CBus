@@ -114,6 +114,7 @@ struct bus ajout_bus() {
 }
 
 void add_driver() {
+    int nb;
 
     printf("Combien de chauffeur souhaitez-vous ajouter ? ");
     scanf("%d", &nb);
