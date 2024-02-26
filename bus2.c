@@ -27,7 +27,7 @@ int main() {
         switch (choix_principal) {
             case 1:
                 do {
-                    struct student prop;
+                    struct bus prop;
                     printf("\nMENU Gérer bus\n");
                     printf("1 - Ajouter bus\n");
                     printf("2 - Afficher\n");
@@ -84,24 +84,20 @@ int main() {
 }
 
 struct bus ajout_bus() {
-    int i;
-
-    printf("Combien souhaitez-vous ajouter de bus ?\n");
-    scanf("%d", &nb);
-
+    int i = 0;
     struct bus prop;
 
         printf("\nEntrer l'ID du bus %d : ", i);
-        scanf ("%d", &prop[i].id);
+        scanf ("%d", &prop.id);
 
         printf("\nEntrer la ligne du bus %d : ", i);
-        scanf ("%d", &prop[i].line);
+        scanf ("%d", &prop.line);
 
         printf("\nEntrer le nombre de places disponibles du bus %d : ", i);
-        scanf ("%d", &prop[i].seats);
+        scanf ("%d", &prop.seats);
 
         printf("\nEnter le nom du chauffeur de bus %d : ", i);
-        scanf ("%s", prop[i].driver);
+        scanf ("%s", prop.driver);
 
         printf("### RECAPITULATIF ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop.id, prop.line, prop.seats, prop.driver);
 
