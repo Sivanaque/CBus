@@ -38,9 +38,9 @@ int main() {
                     printf("0 - Quitter\n");
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
-
-                    struct 
-                    prop = ajout_bus();
+                    if (choix_sous_menu == 1) {
+                        
+                    }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
