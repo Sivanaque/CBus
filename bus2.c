@@ -10,7 +10,7 @@ struct bus {
 };
 
 struct bus ajout_bus();
-void ajout_bus():
+void add_driver();
 
 int main() {
     int choix_principal;
@@ -110,4 +110,17 @@ struct bus ajout_bus() {
         printf("\n### RECAPITULATIF ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.line, prop.seats, prop.driver);
 
         return prop;
+}
+
+void add_driver() {
+    char variable[10][100];
+
+    printf("Enter Strings\n");
+        for (int i = 0; i < 3 ; i++) {
+            scanf("%100s", variable[i]);
+        }
+
+        for (int i = 0; i < 3 ; i++) {
+            
+        }
 }
