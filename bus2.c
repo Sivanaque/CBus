@@ -17,10 +17,10 @@ int main() {
 
     do {
         printf("\nMENU PRINCIPAL\n");
-        printf("1 = Gérer bus\n");
-        printf("2 = Gérer ligne\n");
-        printf("3 = Statistiques\n");
-        printf("0 = Quitter\n");
+        printf("1 - Gérer bus\n");
+        printf("2 - Gérer ligne\n");
+        printf("3 - Statistiques\n");
+        printf("0 - Quitter\n");
         printf("Entrez votre choix: ");
         scanf("%d", &choix_principal);
 
@@ -95,7 +95,7 @@ struct bus ajout_bus() {
         printf("\nEntrer le nombre de places disponibles du bus : ");
         scanf ("%d", &prop.seats);
 
-        printf("\nEnter le nom du chauffeur de bus :");
+        printf("\nEnter le nom du chauffeur de bus : ");
         scanf(" %[^\n]%*c", prop.driver);
 
         printf("\n### RECAPITULATIF ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.line, prop.seats, prop.driver);
