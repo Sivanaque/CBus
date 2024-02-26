@@ -10,6 +10,7 @@ struct bus {
 };
 
 struct bus ajout_bus();
+void ajout_bus():
 
 int main() {
     int choix_principal;
@@ -50,7 +51,7 @@ int main() {
                         strcpy(prop.driver, "NULL");
                         printf("\nVotre bus a bien été supprimé !\n");
                     } else if (choix_sous_menu == 4) {
-                        
+                        add_driver();
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
