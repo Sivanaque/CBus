@@ -48,7 +48,8 @@ int main() {
                     } else if (choix_sous_menu == 3) {
                         prop.line = 0;
                         prop.seats = 0;
-                        prop.driver = strcpy(prop.driver, "UNKNOWN");
+                        strcpy(prop.driver, "NULL");
+                        printf("Votre bus a bien été enregistré !");
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
