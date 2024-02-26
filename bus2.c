@@ -81,15 +81,13 @@ int main() {
 }
 
 struct bus ajout_bus() {
-    int nb;
     int i;
 
     printf("Combien souhaitez-vous ajouter de bus ?\n");
     scanf("%d", &nb);
 
-    struct bus prop[nb];
+    struct bus prop;
 
-    for (i = 0; i < nb; i++) {
         printf("\nEntrer l'ID du bus %d : ", i);
         scanf ("%d", &prop[i].id);
 
@@ -101,11 +99,8 @@ struct bus ajout_bus() {
 
         printf("\nEnter le nom du chauffeur de bus %d : ", i);
         scanf ("%s", prop[i].driver);
-    }
 
-    for (i = 0; i < nb; i++) {
         printf("### RECAPITULATIF ### \nID : %d \nLigne : %d \nPlaces : %d \nConducteur : %s", prop[i].id, prop[i].line, prop[i].seats, prop[i].driver);
-    }
 
-    free(prop);
+        return prop;
 }
