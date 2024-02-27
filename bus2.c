@@ -78,7 +78,6 @@ int main() {
                             printf("Chauffeur numéro %d : %s \n", i, array_driver[i]);
                         }
                     }
-                    // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
 
@@ -111,10 +110,6 @@ int main() {
                         line.nbstations = 0;
                     }
 
-                    if (choix_sous_menu == 4) {
-                        
-                    }
-                    // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
 
@@ -128,8 +123,14 @@ int main() {
                     printf("0 - Quitter\n");
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
-                    // Ajouter des appels de fonctions ou du code pour chaque option
+
+                    if (choix_sous_menu == 1) {
+                        printf("Min bus : %d", line.minb);
+                    }
                 } while (choix_sous_menu != 0);
+
+
+
                 break;
             case 0:
                 printf("Au revoir !\n");
