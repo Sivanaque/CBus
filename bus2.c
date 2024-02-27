@@ -61,6 +61,7 @@ int main() {
                         prop.line = 0;
                         prop.seats = 0;
                         strcpy(prop.driver, "NULL");
+                        nombre_bus--;
                         printf("\nVotre bus a bien été supprimé !\n");
 
                     } else if (choix_sous_menu == 4) {
@@ -109,6 +110,8 @@ int main() {
                         line.minb = 0;
                         line.maxb = 0;
                         line.nbstations = 0;
+                        nombre_bus--;
+                        printf("Ligne supprimée avec succès !");
                     }
 
                 } while (choix_sous_menu != 0);
@@ -197,4 +200,3 @@ struct line ajout_line() {
 
     return newline;
 }
-
