@@ -102,7 +102,7 @@ int main() {
 
                     if (choix_sous_menu == 2) {
                         system("cls");
-                        printf("### RESUME BUS ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", .line, prop.seats, prop.driver);
+                        printf("### RESUME LIGNE ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", line., prop.seats, prop.driver);
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
