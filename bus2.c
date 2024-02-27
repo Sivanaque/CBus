@@ -122,9 +122,9 @@ struct bus ajout_bus() {
         scanf(" %[^\n]%*c", prop.driver);
 
         printf("Entrer la marque du bus : ");
-        scanf(" %[^\n]%*c", prop.)
+        scanf(" %[^\n]%*c", prop.marque);
 
-        printf("\n### RECAPITULATIF ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.line, prop.seats, prop.driver);
+        printf("\n### RECAPITULATIF ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n Marque : %s\n", prop.id, prop.line, prop.seats, prop.driver, prop.marque);
 
         return prop;
 }
