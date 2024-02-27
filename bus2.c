@@ -10,8 +10,13 @@ struct bus {
     char marque[30];
 };
 
+int nb;
+
 struct line {
-    in
+    int num;
+    int minb;
+    int maxb;
+    char stations[10][50];
 }
 
 struct bus ajout_bus();
