@@ -18,7 +18,7 @@ struct line {
 };
 
 struct bus ajout_bus();
-struct bus ajout_line();
+struct line ajout_line();
 
 int main() {
     int choix_principal;
@@ -27,7 +27,7 @@ int main() {
 
     do {
         struct bus prop;
-        struct bus line;
+        struct line line;
         printf("\nMENU PRINCIPAL\n");
         printf("1 - Gérer bus\n");
         printf("2 - Gérer ligne\n");
@@ -53,7 +53,7 @@ int main() {
                         prop = ajout_bus();
 
                     } else if (choix_sous_menu == 2) {
-                        system("clear");
+                        system("cls");
                         printf("### RESUME BUS ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.line, prop.seats, prop.driver);
 
                     } else if (choix_sous_menu == 3) {
@@ -98,6 +98,11 @@ int main() {
 
                     if (choix_sous_menu == 1) {
                         line = ajout_line();
+                    }
+
+                    if (choix_sous_menu == 2) {
+                        system("cls");
+                        printf("### RESUME BUS ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", .line, prop.seats, prop.driver);
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
@@ -157,7 +162,7 @@ struct bus ajout_bus() {
 }
 
 
-struct bus ajout_line() {
+struct line ajout_line() {
     int i = 0;
     struct line newline;
 
