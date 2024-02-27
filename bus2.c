@@ -10,7 +10,6 @@ struct bus {
 };
 
 struct bus ajout_bus();
-char add_driver();
 
 int main() {
     int choix_principal;
