@@ -57,15 +57,15 @@ int main() {
 
                         printf("Combien de chauffeur souhaitez-vous ajouter ? ");
                         scanf("%d", &nb);
-                        char driver[nb][50];
+                        char array_driver[nb][50];
 
                         for (int i = 0; i < nb ; i++) {
                             printf("Enter le nom du chauffeur N°%d\n", i);
-                            scanf(" %[^\n]%*c", driver[i]);
+                            scanf(" %[^\n]%*c", array_driver[i]);
                         }
 
                         for (int i = 0; i < nb ; i++) {
-                            printf("Chauffeur numéro %d : %s \n", i, driver[i]);
+                            printf("Chauffeur numéro %d : %s \n", i, array_driver[i]);
                         }
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
