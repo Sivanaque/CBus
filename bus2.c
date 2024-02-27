@@ -163,7 +163,7 @@ struct bus ajout_line() {
 
     }
 
-    printf("\nEntrer le numéro de la ligne : ");
+    printf("\nPour la %d, Entrer le numéro de la ligne : ", i);
     scanf ("%d", &prop.line);
 
     printf("\nEntrer le nombre de places disponibles du bus : ");
