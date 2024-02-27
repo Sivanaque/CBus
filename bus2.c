@@ -124,9 +124,6 @@ int main() {
 
 
 
-
-
-
 struct bus ajout_bus() {
     int i = 0;
     struct bus prop;
