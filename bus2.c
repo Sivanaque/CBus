@@ -43,14 +43,17 @@ int main() {
                     scanf("%d", &choix_sous_menu);
                     if (choix_sous_menu == 1) {
                         prop = ajout_bus();
+
                     } else if (choix_sous_menu == 2) {
                         system("clear");
                         printf("### RESUME BUS ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.line, prop.seats, prop.driver);
+
                     } else if (choix_sous_menu == 3) {
                         prop.line = 0;
                         prop.seats = 0;
                         strcpy(prop.driver, "NULL");
                         printf("\nVotre bus a bien été supprimé !\n");
+                        
                     } else if (choix_sous_menu == 4) {
                         int nb;
 
@@ -131,3 +134,4 @@ struct bus ajout_bus() {
 
         return prop;
 }
+
