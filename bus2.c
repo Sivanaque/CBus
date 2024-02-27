@@ -10,14 +10,12 @@ struct bus {
     char marque[30];
 };
 
-int nb;
-
 struct line {
     int num;
     int minb;
     int maxb;
-    char stations[10][50];
-}
+    int nbstations;
+};
 
 struct bus ajout_bus();
 
@@ -27,6 +25,7 @@ int main() {
 
 
     do {
+        struct bus prop;
         printf("\nMENU PRINCIPAL\n");
         printf("1 - Gérer bus\n");
         printf("2 - Gérer ligne\n");
@@ -36,10 +35,8 @@ int main() {
         scanf("%d", &choix_principal);
 
         switch (choix_principal) {
-            struct bus prop;
             case 1:
                 do {
-
                     printf("\nMENU Gérer bus\n");
                     printf("1 - Ajouter bus\n");
                     printf("2 - Afficher\n");
