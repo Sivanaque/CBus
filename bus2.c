@@ -18,6 +18,7 @@ struct line {
 };
 
 struct bus ajout_bus();
+struct bus ajout_line();
 
 int main() {
     int choix_principal;
@@ -148,5 +149,9 @@ struct bus ajout_bus() {
         printf("\n### RECAPITULATIF ### \nID Bus : %d\nLigne : %d\nPlaces : %d\nConducteur : %s\nMarque : %s\n", prop.id, prop.line, prop.seats, prop.driver, prop.marque);
 
         return prop;
+}
+
+struct bus ajout_line() {
+
 }
 
