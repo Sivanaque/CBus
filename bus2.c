@@ -87,11 +87,10 @@ int main() {
                 do {
                     printf("\nMENU Gérer ligne\n");
                     printf("1 - Ajouter\n");
-                    printf("2 - Afficher tous\n");
-                    printf("3 - Consulter\n");
-                    printf("4 - Supprimer\n");
-                    printf("5 - Afficher bus d'une ligne\n");
-                    printf("6 - Trier par nombres de stations\n");
+                    printf("2 - Consulter\n");
+                    printf("3 - Supprimer\n");
+                    printf("4 - Afficher bus d'une ligne\n");
+                    printf("5 - Trier par nombres de stations\n");
                     printf("0 - Quitter\n");
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
@@ -103,6 +102,17 @@ int main() {
                     if (choix_sous_menu == 2) {
                         system("cls");
                         printf("### RESUME LIGNE ### \nLigne : %d \nBus min sur la ligne : %d \nBus max sur la ligne : %d\nNombres de stations sur la ligne : %d\n", line.num, line.minb, line.maxb, line.nbstations);
+                    }
+
+                    if (choix_sous_menu == 3) {
+                        line.num = 0;
+                        line.minb = 0;
+                        line.maxb = 0;
+                        line.nbstations = 0;
+                    }
+
+                    if (choix_sous_menu == 4) {
+                        
                     }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
