@@ -129,7 +129,7 @@ struct bus ajout_bus() {
     struct bus prop;
 
         printf("\nVeuillez entrer l'ID du bus : ");
-        scanf ("%d", &prop.line);
+        scanf ("%d", &prop.id);
 
         printf("\nEntrer la ligne du bus : ");
         scanf ("%d", &prop.line);
@@ -140,10 +140,10 @@ struct bus ajout_bus() {
         printf("\nEnter le nom du chauffeur de bus : ");
         scanf(" %[^\n]%*c", prop.driver);
 
-        printf("Entrer la marque du bus : ");
+        printf("\nEntrer la marque du bus : ");
         scanf(" %[^\n]%*c", prop.marque);
 
-        printf("\n### RECAPITULATIF ### \nID Bus : %d \nLigne : %d \nPlaces : %d \nConducteur : %s\n Marque : %s\n", prop.id, prop.line, prop.seats, prop.driver, prop.marque);
+        printf("\n### RECAPITULATIF ### \nID Bus : %d\nLigne : %d\nPlaces : %d\nConducteur : %s\nMarque : %s\n", prop.id, prop.line, prop.seats, prop.driver, prop.marque);
 
         return prop;
 }
