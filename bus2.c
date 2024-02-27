@@ -156,22 +156,23 @@ struct bus ajout_bus() {
         return prop;
 }
 
+
 struct bus ajout_line() {
     int i = 0;
-    struct bus line;
+    struct line newline;
 
     printf("\nEntrer le numéro de la ligne : ");
-    scanf ("%d", &line.num);
+    scanf ("%d", &newline.num);
 
     printf("\nEntrer le nombre de bus minimum pour cette ligne : ");
-    scanf ("%d", &line.minb);
+    scanf ("%d", &newline.minb);
 
     printf("\nEntrer le nombre de bus maximum pour cette ligne : ");
-    scanf("%d", &line.maxb);
+    scanf("%d", &newline.maxb);
 
     printf("\nEntrer le nombre de stations pour cette ligne : ");
-    scanf("%d", &line.nbstations);
+    scanf("%d", &newline.nbstations);
 
-    return line;
+    return newline;
 }
 
