@@ -162,9 +162,11 @@ struct bus ajout_line() {
     scanf ("%d", &line.minb);
 
     printf("\nEnter le nom du chauffeur de bus : ");
-    scanf(" %[^\n]%*c", &line.maxb);
+    scanf("%d", &line.maxb);
 
     printf("\nEntrer la marque du bus : ");
-    scanf(" %[^\n]%*c", &line.marque);
+    scanf("%d", &line.nbstations);
+
+    return line;
 }
 
