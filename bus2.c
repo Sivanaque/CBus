@@ -153,7 +153,15 @@ struct bus ajout_bus() {
 
 struct bus ajout_line() {
     int i = 0;
+    int nb;
     struct bus line;
+
+    printf("Combien de lignes souhaitez-vous ajouter ?");
+    scanf("%d", nb);
+
+    for (int i = 0, i < nb; i++) {
+
+    }
 
     printf("\nEntrer le numéro de la ligne : ");
     scanf ("%d", &prop.line);
