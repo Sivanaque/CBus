@@ -53,7 +53,7 @@ int main() {
                         prop.seats = 0;
                         strcpy(prop.driver, "NULL");
                         printf("\nVotre bus a bien été supprimé !\n");
-                        
+
                     } else if (choix_sous_menu == 4) {
                         int nb;
 
@@ -73,6 +73,8 @@ int main() {
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
+
+
             case 2:
                 do {
                     printf("\nMENU Gérer ligne\n");
@@ -88,6 +90,8 @@ int main() {
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
+
+
             case 3:
                 do {
                     printf("\nMENU Statistiques\n");
@@ -110,6 +114,14 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+
 
 struct bus ajout_bus() {
     int i = 0;
