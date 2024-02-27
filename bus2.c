@@ -27,6 +27,7 @@ int main() {
 
     do {
         struct bus prop;
+        struct bus line;
         printf("\nMENU PRINCIPAL\n");
         printf("1 - Gérer bus\n");
         printf("2 - Gérer ligne\n");
@@ -94,6 +95,10 @@ int main() {
                     printf("0 - Quitter\n");
                     printf("Entrez votre choix: ");
                     scanf("%d", &choix_sous_menu);
+
+                    if (choix_sous_menu == 1) {
+                        line = ajout_line();
+                    }
                     // Ajouter des appels de fonctions ou du code pour chaque option
                 } while (choix_sous_menu != 0);
                 break;
@@ -158,13 +163,13 @@ struct bus ajout_line() {
     printf("\nEntrer le numéro de la ligne : ");
     scanf ("%d", &line.num);
 
-    printf("\nEntrer le nombre de places disponibles du bus : ");
+    printf("\nEntrer le nombre de bus minimum pour cette ligne : ");
     scanf ("%d", &line.minb);
 
-    printf("\nEnter le nom du chauffeur de bus : ");
+    printf("\nEntrer le nombre de bus maximum pour cette ligne : ");
     scanf("%d", &line.maxb);
 
-    printf("\nEntrer la marque du bus : ");
+    printf("\nEntrer le nombre de stations pour cette ligne : ");
     scanf("%d", &line.nbstations);
 
     return line;
