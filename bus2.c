@@ -10,6 +10,10 @@ struct bus {
     char marque[30];
 };
 
+struct line {
+    in
+}
+
 struct bus ajout_bus();
 
 int main() {
