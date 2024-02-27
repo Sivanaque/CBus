@@ -27,9 +27,9 @@ int main() {
         scanf("%d", &choix_principal);
 
         switch (choix_principal) {
+            struct bus prop;
             case 1:
                 do {
-                    struct bus prop;
 
                     printf("\nMENU Gérer bus\n");
                     printf("1 - Ajouter bus\n");
