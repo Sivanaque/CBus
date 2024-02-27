@@ -23,6 +23,7 @@ struct line ajout_line();
 int main() {
     int choix_principal;
     int choix_sous_menu;
+    int nombre_bus = 0;
 
 
     do {
@@ -51,7 +52,7 @@ int main() {
                     scanf("%d", &choix_sous_menu);
                     if (choix_sous_menu == 1) {
                         prop = ajout_bus();
-
+                        nombre_bus++;
                     } else if (choix_sous_menu == 2) {
                         system("cls");
                         printf("### RESUME BUS ### \nLigne : %d \nPlaces : %d \nConducteur : %s\n", prop.line, prop.seats, prop.driver);
@@ -125,8 +126,13 @@ int main() {
                     scanf("%d", &choix_sous_menu);
 
                     if (choix_sous_menu == 1) {
-                        printf("Min bus : %d", line.minb);
+                        printf("Min bus : %d\n", line.minb);
+                    } else if (choix_sous_menu == 2) {
+                        printf("Max bus : %d\n", line.maxb);
+                    } else if (choix_sous_menu == 3) {
+                        printf("Moyenne bus : %d\n", nombre_bus);
                     }
+
                 } while (choix_sous_menu != 0);
 
 
