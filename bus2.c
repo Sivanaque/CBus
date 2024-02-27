@@ -30,7 +30,7 @@ int main() {
             case 1:
                 do {
                     struct bus prop;
-                    char driver;
+                    char array_driver;
                     printf("\nMENU Gérer bus\n");
                     printf("1 - Ajouter bus\n");
                     printf("2 - Afficher\n");
@@ -54,10 +54,10 @@ int main() {
                         printf("\nVotre bus a bien été supprimé !\n");
                     } else if (choix_sous_menu == 4) {
                         int nb;
+                        char array_driver[nb][50];
 
                         printf("Combien de chauffeur souhaitez-vous ajouter ? ");
                         scanf("%d", &nb);
-                        char array_driver[nb][50];
 
                         for (int i = 0; i < nb ; i++) {
                             printf("Enter le nom du chauffeur N°%d\n", i);
