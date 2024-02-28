@@ -181,7 +181,6 @@ struct bus ajout_bus() {
         return prop;
 }
 
-
 struct line ajout_line() {
     int i = 0;
     struct line newline;
